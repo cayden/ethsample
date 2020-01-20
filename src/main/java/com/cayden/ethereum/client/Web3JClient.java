@@ -4,6 +4,7 @@ import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
 
 /**
+ * http://127.0.0.1:8545/
  * Created by cuiran on 18/7/6.
  */
 public class Web3JClient {
