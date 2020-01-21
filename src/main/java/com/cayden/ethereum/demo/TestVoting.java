@@ -152,8 +152,8 @@ public class TestVoting {
             System.out.println("file:"+filePath + "/" + fileName);
             Credentials credentials = WalletUtils.loadCredentials("123456", filePath + "/" + fileName);
             Voting voting= Voting.load("0x0ec1a8054248dcd032a3267a9ff4a759f6add74e",web3j, credentials, BigInteger.valueOf(200000), BigInteger.valueOf(2000000));
-          if(  voting.isValid()){
-              TransactionReceipt transactionReceipt= voting.totalVotesFor(stringToBytes("zhangsan")).send();
+          if(voting.isValid()){
+              TransactionReceipt transactionReceipt= voting.totalVotesFor(stringToBytes("zhangsan")).sendAsync().get();
 
               System.out.println(transactionReceipt);
           }
